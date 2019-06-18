@@ -1,14 +1,18 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
+  <ion-title>
+    Ionic Babeliser
+  </ion-title>
 </ion-header>
 
-<ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+<ion-content padding>
+
+  <ion-select [(ngModel)]="language" (ionChange)="changeLanguage()" placeholder="Select One">
+    <ion-select-option value="en">English</ion-select-option>
+    <ion-select-option value="th">ไทย</ion-select-option>
+  </ion-select>
+
+  <ion-card padding>
+    <h1>{{ title }}</h1>
+    <p>{{ description }}</p>
+  </ion-card>
 </ion-content>
